@@ -16,33 +16,36 @@
     </div>
     <div class="hotels-list-container">
       <h2 class="hotels-list-header">Day 1</h2>
-      <ul
-        v-if="this.$store.state.isMapOpen"
-        class="holels-list"
-        :class="{
-          'holels-list-map-open': this.$store.state.isMapOpen === true,
-        }"
-      >
-        <HotelItemOpenM
-          v-for="HotelItem in hoteslData"
-          :key="HotelItem.id"
-          :itemData="HotelItem"
-        />
-      </ul>
-      <ul
-        v-else
-        class="holels-list"
-        :class="{
-          'holels-list-map-open': this.$store.state.isMapOpen === true,
-        }"
-      >
-        <HotelItem
-          v-for="HotelItem in hoteslData"
-          :key="HotelItem.id"
-          :itemData="HotelItem"
-        />
-      </ul>
 
+      <div v-if="hoteslData.length === 0" class="no-content">No content</div>
+      <div v-else>
+        <ul
+          v-if="this.$store.state.isMapOpen"
+          class="holels-list"
+          :class="{
+            'holels-list-map-open': this.$store.state.isMapOpen === true,
+          }"
+        >
+          <HotelItemOpenM
+            v-for="HotelItem in hoteslData"
+            :key="HotelItem.id"
+            :itemData="HotelItem"
+          />
+        </ul>
+        <ul
+          v-else
+          class="holels-list"
+          :class="{
+            'holels-list-map-open': this.$store.state.isMapOpen === true,
+          }"
+        >
+          <HotelItem
+            v-for="HotelItem in hoteslData"
+            :key="HotelItem.id"
+            :itemData="HotelItem"
+          />
+        </ul>
+      </div>
       <div class="hotels-list"></div>
     </div>
   </div>
@@ -165,6 +168,12 @@ export default {
   flex-direction: column;
   /* width: 754px; */
   width: 100%;
+}
+.no-content {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
