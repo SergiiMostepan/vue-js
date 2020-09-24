@@ -72,19 +72,25 @@ export default {
 
   methods: {
     addToFavorite() {
-      let hotelExist = false;
       const item = this.itemData;
-      this.$store.state.favoriteHotels.forEach((hotel) => {
-        item.id === hotel.id ? (hotelExist = true) : "";
+      const exist = this.$store.state.favoriteHotels.find((hotel) => {
+        return item.id === hotel.id;
       });
-      if (!hotelExist) {
+      if (!exist) {
+        console.log(exist);
         this.$store.dispatch("addHotel", item);
-        this.showNotify();
+        this.showNotifySuccess();
+      } else {
+        this.showNotifyFail();
       }
-      hotelExist = false;
-    }, // перепесать под метод find
+    },
     showNotify() {
       this.$toast.success("Added to favorite", {
+        timeout: 2000,
+      });
+    },
+    showNotifyFail() {
+      this.$toast.warning("Already added to favorite", {
         timeout: 2000,
       });
     },
