@@ -7,6 +7,7 @@
       }"
     >
       <HeaderMain />
+      <div class="embedding-container"></div>
       <HotelsList />
     </div>
     <div
@@ -22,14 +23,29 @@
 import HeaderMain from "./HeaderMain.vue";
 import HotelsList from "./HotelsList.vue";
 import Map from "./Map.vue";
+// import '../../../../../../zoid'
+// import '../../../../../../The trip butique/Project/ttb.front/pages/share-quiz/index.js'
 
 export default {
   name: "Main",
   components: {
     HeaderMain,
     HotelsList,
-    Map,
+    Map,  
   },
+  // created() {
+  //   var scripts = [
+  //     "../../../../vue/embedding.js",
+  //   ];
+  //   scripts.forEach(script => {
+  //     let tag = document.createElement("script");
+  //     tag.setAttribute("src", script);
+  //     document.head.appendChild(tag);
+  //   });
+  // },
+  mounted() {
+
+  }
 };
 </script>
 
