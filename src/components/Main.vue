@@ -1,16 +1,20 @@
 <template>
   <div class="main-container">
     <div
+   
       class="content-container-hl"
       :class="{
         'content-container-hl-open': this.$store.state.isMapOpen === true,
       }"
     >
-      <HeaderMain />
-      <div class="embedding-container"></div>
-      <HotelsList />
+      <HeaderMain  v-if="!isWidget" />
+      <div class="header">The Trip Boutique widget</div>
+      <div class="embedding-container" data-src='http://localhost:3000/widget/quiz' style="width:100%; height:500px"></div>
+      <div class="footer"></div>
+      <HotelsList  v-if="!isWidget" />
     </div>
     <div
+     v-if="!isWidget"
       class="map-h-container"
       :class="{ 'map-open': this.$store.state.isMapOpen === true }"
     >
@@ -23,26 +27,19 @@
 import HeaderMain from "./HeaderMain.vue";
 import HotelsList from "./HotelsList.vue";
 import Map from "./Map.vue";
-// import '../../../../../../zoid'
-// import '../../../../../../The trip butique/Project/ttb.front/pages/share-quiz/index.js'
 
 export default {
   name: "Main",
+  data() {
+  return {
+    isWidget: true
+  }
+  },
   components: {
     HeaderMain,
     HotelsList,
     Map,  
   },
-  // created() {
-  //   var scripts = [
-  //     "../../../../vue/embedding.js",
-  //   ];
-  //   scripts.forEach(script => {
-  //     let tag = document.createElement("script");
-  //     tag.setAttribute("src", script);
-  //     document.head.appendChild(tag);
-  //   });
-  // },
   mounted() {
 
   }
@@ -51,17 +48,16 @@ export default {
 
 <style>
 .main-container {
-  margin-left: 147px;
+  /* margin-left: 147px; */
   display: flex;
   justify-content: space-between;
 }
 .content-container-hl {
-  /* width: 1048px; */
-  width: 78%;
+  /* width: 78%; */
+  width: 100%;
   transition: width 0.4s;
 }
 .content-container-hl-open {
-  /* width: 754px;*/
   width: 57%;
   transition: width 0.4s;
 }
@@ -93,5 +89,20 @@ export default {
     height: 100vh;
     transition: width 0.4s;
   }
+}
+.header {
+   margin-bottom: 30px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  width: 100%;
+  height: 70px;
+  background-color: aqua;
+}
+.footer {
+  margin-top: 30px;
+  width: 100%;
+  height: 70px;
+  background-color: aqua;
 }
 </style>

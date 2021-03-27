@@ -10,6 +10,7 @@ export default {
 
 <style scoped>
 .header-container {
+  display: none;
   width: 100%;
   height: 88px;
   background-color: #eeeeee;
