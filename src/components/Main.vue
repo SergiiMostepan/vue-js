@@ -9,7 +9,8 @@
     >
       <HeaderMain  v-if="!isWidget" />
       <div class="header">The Trip Boutique widget</div>
-      <div class="embedding-container" data-src='http://localhost:3000/widget/quiz' style="width:100%; height:500px"></div>
+      <!-- <div class="embedding-container" data-src='http://localhost:3000/widget/quiz' style="width:100%; height:500px"></div> -->
+       <div class="embedding-container" data-src='http://localhost:3000/itinerary/1982' style="width:100%; height:100vh"></div>
       <div class="footer"></div>
       <HotelsList  v-if="!isWidget" />
     </div>
@@ -91,7 +92,7 @@ export default {
   }
 }
 .header {
-   margin-bottom: 30px;
+   /* margin-bottom: 30px; */
    display: flex;
    justify-content: center;
    align-items: center;
@@ -100,7 +101,7 @@ export default {
   background-color: aqua;
 }
 .footer {
-  margin-top: 30px;
+  /* margin-top: 30px; */
   width: 100%;
   height: 70px;
   background-color: aqua;
