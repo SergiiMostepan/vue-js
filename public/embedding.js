@@ -17,7 +17,7 @@ function embeddingSite() {
 
   const GTMElement = document.createElement('script')
   GTMElement.async = true;
-  GTMElement.src = "https://www.googletagmanager.com/gtag/js?id=UA-85710133-1"
+  GTMElement.src = "https://www.googletagmanager.com/gtag/js?id=G-Q6PT8FNCR7"
   GTMElement.src = "https://www.googletagmanager.com/gtag/js?id=G-X3H1XBNYBC"
   targetElement.appendChild(GTMElement)
 
@@ -26,7 +26,7 @@ function embeddingSite() {
   gtag('js', new Date());
 
 
-  gtag('config', 'UA-85710133-1', {
+  gtag('config', 'G-Q6PT8FNCR7', {
       'page_title' : 'widget',
       'page_path': '/widget'
     });
