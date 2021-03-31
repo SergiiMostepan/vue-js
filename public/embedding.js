@@ -30,7 +30,7 @@ function embeddingSite() {
       'page_title' : 'widget',
       'page_path': '/widget'
     });
-  }
+
   // gtag('config', 'UA-85710133-1', {
   gtag('config', 'G-X3H1XBNYBC', {
     'page_title' : 'widget',
