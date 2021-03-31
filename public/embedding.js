@@ -17,7 +17,7 @@ function embeddingSite() {
 
   const GTMElement = document.createElement('script')
   GTMElement.async = true;
-  // GTMElement.src = "https://www.googletagmanager.com/gtag/js?id=UA-85710133-1"
+  GTMElement.src = "https://www.googletagmanager.com/gtag/js?id=UA-85710133-1"
   GTMElement.src = "https://www.googletagmanager.com/gtag/js?id=G-X3H1XBNYBC"
   targetElement.appendChild(GTMElement)
 
@@ -25,8 +25,14 @@ function embeddingSite() {
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
+
+  gtag('config', 'UA-85710133-1', {
+      'page_title' : 'widget',
+      'page_path': '/widget'
+    });
+  }
   // gtag('config', 'UA-85710133-1', {
-    gtag('config', 'G-X3H1XBNYBC', {
+  gtag('config', 'G-X3H1XBNYBC', {
     'page_title' : 'widget',
     'page_path': '/widget'
   });
