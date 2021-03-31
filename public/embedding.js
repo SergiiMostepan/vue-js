@@ -18,13 +18,22 @@ function embeddingSite() {
   const GTMElement = document.createElement('script')
   GTMElement.async = true;
   GTMElement.src = "https://www.googletagmanager.com/gtag/js?id=G-Q6PT8FNCR7"
-  GTMElement.src = "https://www.googletagmanager.com/gtag/js?id=G-X3H1XBNYBC"
   targetElement.appendChild(GTMElement)
+
+  const GTMElementPartner = document.createElement('script')
+  GTMElementPartner.async = true;
+  GTMElementPartner.src = "https://www.googletagmanager.com/gtag/js?id=G-X3H1XBNYBC"
+  targetElement.appendChild(GTMElementPartner)
+
+  // (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  // new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  // j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  // 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  // })(window,document,'script','dataLayer','G-Q6PT8FNCR7');
 
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
 
   gtag('config', 'G-Q6PT8FNCR7', {
       'page_title' : 'widget',
