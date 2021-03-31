@@ -11,9 +11,26 @@ function embeddingSite() {
   iframeElement.width='100%'
   iframeElement.height='100%'
   iframeElement.style.cssText = 'border:none;'
+  console.dir(iframeElement)
+  
   
   targetElement.appendChild(iframeElement);
-  
+
+  // const iframeHead = iframeElement.contentWindow.document.querySelector('head')
+  // const iframeBody = iframeElement.contentWindow.document.querySelector('body')
+  // console.log(iframeHead)
+  // console.log(iframeBody)
+
+  // const GTMIframe0 = `<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  // new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  // j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  // 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  // })(window,document,'script','dataLayer','GTM-TJNGKMR');</script>`
+  // const GTMIframe1 = `<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJNGKMR"
+  // height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>`
+ 
+  // iframeHead.insertAdjacentHTML("beforeend", GTMIframe0);
+  // iframeBody.insertAdjacentHTML("beforeend", GTMIframe1);
 
   const GTMElement = document.createElement('script')
   GTMElement.async = true;
@@ -59,7 +76,7 @@ function DOMready() {
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KW64XTB');
+    })(window,document,'script','dataLayer','GTM-TJNGKMR');
   // }, 1000)
 }
 
