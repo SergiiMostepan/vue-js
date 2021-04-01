@@ -8,6 +8,7 @@
       }"
     >
       <HeaderMain  v-if="!isWidget" />
+      <a href="https://dev.trip.boutique/" target="_blank"> test</a>
       <div class="header">The Trip Boutique widget</div>
       <!-- <div class="embedding-container" data-src='http://localhost:3000/widget/quiz' style="width:100%; height:100vh"></div> -->
        <div class="embedding-container" data-src='https://dev.trip.boutique/widget/quiz' style="width:100%; height:100vh"></div>
