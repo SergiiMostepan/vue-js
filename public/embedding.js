@@ -10,6 +10,7 @@ function embeddingSite() {
   iframeElement.frameborder="0"
   iframeElement.width='100%'
   iframeElement.height='100%'
+  iframeElement.allow="clipboard-write"
   iframeElement.style.cssText = 'border:none;'
   console.dir(iframeElement)
   
