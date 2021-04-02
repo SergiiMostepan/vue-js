@@ -35,7 +35,8 @@ function embeddingSite() {
 
   const GTMElement = document.createElement('script')
   GTMElement.async = true;
-  GTMElement.src = "https://www.googletagmanager.com/gtag/js?id=G-Q6PT8FNCR7"
+  // GTMElement.src = "https://www.googletagmanager.com/gtag/js?id=G-Q6PT8FNCR7"
+  GTMElement.src = "https://www.googletagmanager.com/gtag/js?id=GTM-TJNGKMR"
   targetElement.appendChild(GTMElement)
 
   // const GTMElementPartner = document.createElement('script')
@@ -48,7 +49,8 @@ function embeddingSite() {
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-Q6PT8FNCR7', {
+  // gtag('config', 'G-Q6PT8FNCR7', {
+    gtag('config', 'GTM-TJNGKMR', {
       'page_title' : 'widget',
       'page_path': '/widget'
     });
