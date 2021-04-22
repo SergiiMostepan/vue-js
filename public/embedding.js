@@ -36,6 +36,7 @@ function embeddingSite() {
   const GTMElement = document.createElement('script')
   GTMElement.async = true;
   // GTMElement.src = "https://www.googletagmanager.com/gtag/js?id=G-Q6PT8FNCR7"
+  // GTMElement.src = "https://www.googletagmanager.com/gtag/js?id=G-CT35TVTPBG"
   // GTMElement.src = "https://www.googletagmanager.com/gtag/js?id=GTM-TJNGKMR"
   targetElement.appendChild(GTMElement)
 
@@ -50,10 +51,7 @@ function embeddingSite() {
   // gtag('js', new Date());
 
   // gtag('config', 'G-Q6PT8FNCR7', {
-  // gtag('config', 'GTM-TJNGKMR', {
-  //   'page_title' : 'widget',
-  //   'page_path': '/widget'
-  // });
+  // gtag('config', 'G-CT35TVTPBG');
 
   // gtag('config', 'G-XTN0308QYC', {
   //   'page_title' : 'widget',

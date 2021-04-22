@@ -8,7 +8,17 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
     <script type="text/javascript" src="https://embedding-test.netlify.app/embedding.js"></script>
     <!-- <script type="text/javascript" src="http://localhost:8080/embedding.js"></script> -->
-    <script></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-CT35TVTPBG"></script> -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-CT35TVTPBG',{
+        'user_id': new Date(),
+        // 'debug_mode':true
+      });
+    </script>
   </head>
   <body>
     <noscript>
