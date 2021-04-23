@@ -12,7 +12,7 @@ function embeddingSite() {
   iframeElement.height='100%'
   iframeElement.allow="clipboard-write"
   iframeElement.style.cssText = 'border:none;'
-  console.dir(iframeElement)
+  // console.dir(iframeElement)
   
   
   targetElement.appendChild(iframeElement);
