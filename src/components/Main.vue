@@ -99,12 +99,12 @@ export default {
    align-items: center;
   width: 100%;
   height: 70px;
-  background-color: aqua;
+  background-color: #F79B39;
 }
 .footer {
   /* margin-top: 30px; */
   width: 100%;
   height: 70px;
-  background-color: aqua;
+  background-color: #F79B39;
 }
 </style>
