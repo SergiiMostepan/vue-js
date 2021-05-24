@@ -9,7 +9,7 @@
     >
       <HeaderMain  v-if="!isWidget" />
       <div class="header">The Trip Boutique widget</div>
-        <div class="embedding-container" data-src='https://dev.trip.boutique/widget/quiz' style="width:100%; height:100vh"></div>
+        <div class="embedding-container" data-src='https://test.trip.boutique/widget/quiz' style="width:100%; height:100vh"></div>
       <!-- <div class="embedding-container" data-src='http://localhost:3000/widget/quiz' style="width:100%; height:100vh"></div> -->
        <!-- <div class="embedding-container" data-src='https://www.thetripboutique.co/widget/quiz' style="width:100%; height:100vh"></div> -->
        <!-- <div class="embedding-container" data-src='https://dev.trip.boutique/itinerary/1982' style="width:100%; height:100vh"></div> -->
